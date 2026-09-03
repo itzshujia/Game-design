@@ -180,6 +180,8 @@ namespace CandyLandConsole
         /// </summary>
         static void InitializeDeck()
         {
+            string[] singleColor = { "Red", "Yellow", "Blue", "Purple", "Orange", "Green" }; // string of singlecolor cards 
+            string[] doubleColor = { "Double Red", "Double Yellow", "Double Blue", "Double Purple", "Double Orange", "Double Green" }; // string of doublecolor cards
             // TODO: Fill the 'deck' list with:
             // - Single-color cards (e.g. "Red", "Yellow"...)
             // - Double-color cards (e.g. "Double Red", "Double Yellow"...)
