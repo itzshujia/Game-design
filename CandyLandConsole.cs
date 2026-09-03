@@ -183,9 +183,29 @@ namespace CandyLandConsole
             // String for color cards and special cards
             string[] singleColor = { "Red", "Yellow", "Blue", "Purple", "Orange", "Green" }; // string of singlecolor cards 
             string[] doubleColor = { "Double Red", "Double Yellow", "Double Blue", "Double Purple", "Double Orange", "Double Green" }; // string of doublecolor cards
-            string[] specialCards = { "Plumpy", "Mr. Mint", "Princess Lolly", "Queen Frostine", "Jolly", "Gramma Nut" }; // string of special cards
+            string[] specialcharacterCards = { "Plumpy", "Mr. Mint", "Princess Lolly", "Queen Frostine", "Jolly", "Gramma Nut" }; // string of special character cards
+        
+        deck = new List<string>(); // create a new string for cards of the deck
 
-            
+        foreach (string color in singleColor) // for each color in singleColor string
+        {
+            for (int i = 0; i < 8; i++) // add 8 of each single color card to the deck
+            {
+                deck.Add(color); // add to color - single to the deck
+            }
+        }
+        foreach (string color in doubleColor) // cfor each color in doubleColor string
+            {
+                for (int i=0; i < 2; i++) // add 2 of each double color card to the check
+                {
+                    deck.Add(color); // add to color - double to the duck
+                }
+            }
+        foreach (string special in specialcharacterCards) // for each specil charaacter string
+            {
+                deck.Add(special); // add (1) to special character to the deck - added 6 rather than 4, 66 cards total instead of 64
+            }
+
             // TODO: Fill the 'deck' list with:
             // - Single-color cards (e.g. "Red", "Yellow"...)
             // - Double-color cards (e.g. "Double Red", "Double Yellow"...)
