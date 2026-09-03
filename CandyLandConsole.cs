@@ -33,7 +33,7 @@ namespace CandyLandConsole
         // ==========================================
         // DAY 1: Arrays and Constants
         // ==========================================
-        // C# Intro 4: Declare and initialize the board array of colors and special spaces.
+        // C# Intro 4: Declare and initialize the board array of colors and special spaces. check commits
         private static string[] board;
         
         // Day 2: Card deck collection
