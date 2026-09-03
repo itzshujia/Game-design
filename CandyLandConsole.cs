@@ -157,13 +157,19 @@ namespace CandyLandConsole
                 board[i] = colorCycle[i % colorCycle.Length];  
             }
 
-            // Save specil character spots
-            board[PlumIndex] = "Plumpy";
-            board[PeppermintStickIndex] = "Mr. Mint";
-            board[GumdropIndex] = "Jolly";
-            board[PeanutBrittleIndex] = "Gramma Nut";
-            board[LollipopIndex] = "Princess Lolly";
-            board[SnowflakeIndex] = "Queen Frostine"; 
+            // Save indexes for special character spots
+            board[PlumIndex] = "Plumpy"; // added plumpy to the board index - 9 space
+            board[PeppermintStickIndex] = "Mr. Mint"; // added Mr. Mint to the board index - 17 space
+            board[GumdropIndex] = "Jolly"; // added Jolly to the board index - 42 space
+            board[PeanutBrittleIndex] = "Gramma Nut"; // added Gramma Nut to the board index - 58 space
+            board[LollipopIndex] = "Princess Lolly"; // added Princess Lolly to the board index - 73 space
+            board[SnowflakeIndex] = "Queen Frostine"; // added Queen Frostine to the board index - 89 space
+
+            // Save Indexes for Licorice spaces and shortcut spaces
+            board[Licorice1Index] = "Licorice"; // added Licorice to the board index - 34 space
+            board[Licorice2Index] = "Licorice"; // added Licorice to the board index - 82 space
+            board[GummyPassStartIndex] = "Gummy Pass"; // added Gummy Pass to the board index - 7 space
+            board[PeppermintPassStartIndex] = "Peppermint Pass"; // added Peppermint Pass to the board index - 20 space
 
             
             // TODO: Set specific indexes for character spots:
