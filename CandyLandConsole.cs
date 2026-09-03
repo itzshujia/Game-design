@@ -118,7 +118,7 @@ namespace CandyLandConsole
                     Console.ReadLine();
                 }
 
-                // C# Intro 5: Method call to check if game is over
+                // C# Intro 5: Method call to check if game is over 
                 if (IsGameOver(activePlayer))
                 {
                     Console.Clear();
