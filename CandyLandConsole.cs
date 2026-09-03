@@ -44,7 +44,7 @@ namespace CandyLandConsole
         {
             Console.WriteLine("=================================================");
             Console.WriteLine("Welcome to C# Console Candy Land!");
-            Console.WriteLine("=================================================");
+            Console.WriteLine("================================================="); 
 
             // ==========================================
             // DAY 1 & 3: Initialization & Player Setup
@@ -148,6 +148,14 @@ namespace CandyLandConsole
         /// </summary>
         static void InitializeBoard()
         {
+            board = new string[BoardSize]; // start the board with 134 spaces
+            string[] colorCycle = { "Red", "Yellow", "Blue", "Purple", "Orange", "Green" }; // repeating color cycle 
+
+            for (int i = 0; i < BoardSize; i++) // Loop through the board size 
+            {
+                // Fill the board with repeating colors
+                board[i] = colorCycle[i % colorCycle.Length]; 
+            }
             // TODO: Initialize the 'board' string array with repeating colors.
             // A standard board has 134 spaces.
             // Example color cycle: Red -> Yellow -> Blue -> Purple -> Orange -> Green
