@@ -165,16 +165,13 @@ namespace CandyLandConsole
             board[LollipopIndex] = "Princess Lolly"; // added Princess Lolly to the board index - 73 space
             board[SnowflakeIndex] = "Queen Frostine"; // added Queen Frostine to the board index - 89 space
 
-            // Save Indexes for Licorice spaces and shortcut spaces
-            board[Licorice1Index] = "Licorice"; // added Licorice to the board index - 34 space
-            board[Licorice2Index] = "Licorice"; // added Licorice to the board index - 82 space
-            board[GummyPassStartIndex] = "Gummy Pass"; // added Gummy Pass to the board index - 7 space
-            board[PeppermintPassStartIndex] = "Peppermint Pass"; // added Peppermint Pass to the board index - 20 space
-
-            
-            // TODO: Set specific indexes for character spots:
-            // "Plumpy", "Mr. Mint", "Jolly", "Gramma Nut", "Princess Lolly", "Queen Frostine"
-            // TODO: Set specific indexes for Licorice spaces and shortcut spaces (Gummy/Peppermint Pass).
+            // Save Indexes for Licorice spaces and shortcut spaces ( peperment and gummy pass - include start and end indexes)
+            board[Licorice1Index] = "Licorice 1"; // added Licoric 1 to the board index - 34 space
+            board[Licorice2Index] = "Licorice 2"; // added Licorice 2 to the board index - 82 space
+            board[GummyPassStartIndex] = "Gummy Pass Start"; // added Gummy Pass ( start ) to the board index - 7 space
+            board[GummyPassEndIndex] = "Gummy Pass End"; // added Gummy Pass ( end ) to the board index - 55 space
+            board[PeppermintPassStartIndex] = "Peppermint Pass Start"; // added Peppermint ( start ) Pass to the board index - 20 space
+            board[PeppermintPassEndIndex] = "Peppermint Pass End"; // added Peppermint ( end ) Pass to the board index - 37 space
         }
 
         /// <summary>
