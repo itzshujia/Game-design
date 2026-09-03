@@ -153,12 +153,19 @@ namespace CandyLandConsole
 
             for (int i = 0; i < BoardSize; i++) // Loop through the board size 
             {
-                // Fill the board with repeating colors
-                board[i] = colorCycle[i % colorCycle.Length]; 
+                // Fill the board with repeating colors, every time i++, it cycles through the colorCycle for each square. 
+                board[i] = colorCycle[i % colorCycle.Length];  
             }
-            // TODO: Initialize the 'board' string array with repeating colors.
-            // A standard board has 134 spaces.
-            // Example color cycle: Red -> Yellow -> Blue -> Purple -> Orange -> Green
+
+            // Save specil character spots
+            board[PlumIndex] = "Plumpy";
+            board[PeppermintStickIndex] = "Mr. Mint";
+            board[GumdropIndex] = "Jolly";
+            board[PeanutBrittleIndex] = "Gramma Nut";
+            board[LollipopIndex] = "Princess Lolly";
+            board[SnowflakeIndex] = "Queen Frostine"; 
+
+            
             // TODO: Set specific indexes for character spots:
             // "Plumpy", "Mr. Mint", "Jolly", "Gramma Nut", "Princess Lolly", "Queen Frostine"
             // TODO: Set specific indexes for Licorice spaces and shortcut spaces (Gummy/Peppermint Pass).
