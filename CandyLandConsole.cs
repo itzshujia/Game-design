@@ -507,6 +507,22 @@ static void MovePlayer(Player player, string card)
                     }
                 }
             }
+            if (player.Position == PeppermintPassStartIndex)
+            {
+                for ( int i = player.Position + 1; i < Board.Length; i++ ) }
+            {
+                if (player.Position == PeppermintPassStartIndex) { // If the players position is on the start for peppermint pass
+            { 
+                for ( int i = player.Position + 1; i < Board.Length; i++ )
+                {
+                    if (board[i] == "Yellow")
+                    {
+                                player.Position = i // change player's position to yellow
+                                break; // stop the loop
+                    }
+                }
+             }
+            
 
 
             // TODO: C# Intro 2
