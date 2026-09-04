@@ -496,6 +496,19 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void CheckForShortcuts(Player player)
         {
+            if (player.Position == GummyPassStartIndex) // If players postition is on start of gummy pass 
+            {
+                for ( int i = player.Position + 1; i < Board.Length; i++  )
+                {
+                    if (board[i] == "Yellow") // find the yellow on the board
+                    {
+                        player.Position = i // change player's position to yellow
+                        break; // stop the loop
+                    }
+                }
+            }
+
+
             // TODO: C# Intro 2
             // If player landed by EXACT COUNT on:
             // - The Gummy Pass yellow space index -> teleport player to the yellow space above.
