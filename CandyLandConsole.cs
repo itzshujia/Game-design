@@ -527,6 +527,10 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void PrintBoardState(Player[] players)
         {
+            foreach (Player player in players)
+            {
+                Console.WriteLine($"{player.Name} is on Space {player.Position}: ({board[player.Position]})");
+            }
 
         }
 
