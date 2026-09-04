@@ -205,6 +205,7 @@ namespace CandyLandConsole
             {
                 deck.Add(special); // add (1) to special character to the deck - added 6 rather than 4, 66 cards total instead of 64
             }
+            Console.WriteLine($"Deck started with {deck.Count} cards."); // log the total number of cards in the deck
 
             // TODO: Fill the 'deck' list with:
             // - Single-color cards (e.g. "Red", "Yellow"...)
@@ -217,13 +218,24 @@ namespace CandyLandConsole
         /// </summary>
         static string DrawCard()
         {
+            if (deck.Count == 0)  // if the deck is empty, resuffle the deck
+            {
+                InitializeDeck(); // reshuffle the deck
+                Console.WriteLine("Deck is empty. Reshuffled deck."); // log that the deck was reshuffled
+            } 
+            int randomIndex = random.Next(deck.Count); // get a random index from the deck
+            string drawnCard = deck[randomIndex]; // get the card at the random index
+            Console.WriteLine($"Drawn card: {drawnCard}"); // log the drawn card
+            deck.RemoveAt(randomIndex); // remove the drawn card from the deck
+            return drawnCard;
+            }
+
+
             // TODO: Implement drawing logic.
             // 1. If 'deck' is empty, call InitializeDeck() to reshuffle the pile.
             // 2. Select a random card index from the deck.
             // 3. Remove the drawn card from the list to simulate taking it from the deck.
             // 4. Return the card string.
-            return "Red"; // Temporary placeholder
-        }
 
         /// <summary>
         /// DAY 2 & 3: Handle player path-finding based on the drawn card.
