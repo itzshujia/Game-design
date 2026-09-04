@@ -242,6 +242,36 @@ namespace CandyLandConsole
         /// </summary>
         static void MovePlayer(Player player, string card)
         {
+            if (drawnCard == specialcharactercard)
+            {
+                 if (card == "Plumpy") 
+                 {
+                    player.positiong = PlumIndex; // Change the player's postion in board to Plum's location on index
+                 }       
+                 else if (card == "Mr.Mint")
+                 {
+                    player.position = PeppermintStickIndex; // Change the player's postion in board to Mr. Mint's location on index
+                 }         
+                 else if (card == "Jolly")
+                 {
+                    player.position = GumdropIndex; // Change the player's postion in board to Jolly's location on index
+                 }         
+                 else if (card == "Gramma Nut")
+                 {
+                    player.position = PeanutBrittleIndex; // Change the player's postion in board to Gramma Nut's location on index
+                 }         
+                 else if (card == "Princess Lolly")
+                 {
+                    player.position = LollipopIndex; // Change the player's postion in board to Princess Lolly's location on index
+                 }         
+                 else if (card == "Queen Frostine")
+                    {
+                        player.position = SnowflakeIndex; // Change the player's postion in board to Queen Frostine's location on index
+                    }
+            else if (card == singlecolor) {
+                if (card == "red")
+                
+            }
             // TODO: C# Intro 2 - Implement multi-way branch logic (if / else if / else)
             
             // Scenario A: Drawing a special character card
