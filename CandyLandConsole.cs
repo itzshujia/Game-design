@@ -240,91 +240,108 @@ namespace CandyLandConsole
         /// <summary>
         /// DAY 2 & 3: Handle player path-finding based on the drawn card.
         /// </summary>
-        static void MovePlayer(Player player, string card)
+static void MovePlayer(Player player, string card)
+{
+    // What if the card is a special character card
+    if (drawnCard == specialcharactercard)
+    {
+        if (card == "Plumpy")
         {
-            // what if the card is a special character card
-            if (drawnCard == specialcharactercard)
-            
-                 if (card == "Plumpy")                {
-                       player.position = PlumIndex; // Change the player's postion in board to Plum's location on index               }       
-  
-                 else if (card == "Mr.Mint")
-                                        player.position = PeppermintStickIndex; // Change the player's postion in board to Mr. Mint's location on index       
-                    
-                 else if (card == "Jolly")
-                 {
-                     player.position = GumdropIndex; // Change the player's postion in board to Jolly's location on index
-                 }         
-                 else if (card == "Gramma Nut")
-                 {
-                     player.position = PeanutBrittleIndex; // Change the player's postion in board to Gramma Nut's location on index
-                 }         
-                 else if (card == "Princess Lolly")
-                 {
-                     player.position = LollipopIndex; // Change the player's postion in board to Princess Lolly's location on index
-                 }         
-                 else if (card == "Queen Frostine")
-                 {
-                     player.position = SnowflakeIndex; // Change the player's postion in board to Queen Frostine's location on index
-                 }
-                 // What if the card is a single color.}            else if (card == singlecolor)
+            player.Position = PlumIndex; // Change player's position to Plum's index
+        }       
+        else if (card == "Mr.Mint")
+        {
+            player.Position = PeppermintStickIndex; // Change player's position to Mr. Mint's index
+        }         
+        else if (card == "Jolly")
+        {
+            player.Position = GumdropIndex; // Change player's position to Jolly's index
+        }         
+        else if (card == "Gramma Nut")
+        {
+            player.Position = PeanutBrittleIndex; // Change player's position to Gramma Nut's index
+        }         
+        else if (card == "Princess Lolly")
+        {
+            player.Position = LollipopIndex; // Change player's position to Princess Lolly's index
+        }         
+        else if (card == "Queen Frostine")
+        {
+            player.Position = SnowflakeIndex; // Change player's position to Queen Frostine's index
+        }
+    }
+    // What if the card is a single color
+    else if (card == singlecolor)
+    {
+        if (card == "red")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Red")
                 {
-if (card == "red")
-                {
-                    for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Red") // if the board index is equal to red
-                {
-                            player.Position = i; // set the player's postion to the index of the board where red is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-                        else if (card == "yellow")
+            }
+        }
+        else if (card == "yellow")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Yellow")
                 {
-                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Yellow") // if the board index is equal to yellow
-                {
-                            player.Position = i; // set the player's postion to the index of the board where yellow is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-            else if (card == "blue")
+            }
+        }
+        else if (card == "blue")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Blue")
                 {
-                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Blue") // if the board index is equal to blue
-                {
-                            player.Position = i; // set the player's postion to the index of the board where blue is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-            else if (card == "purple")
+            }
+        }
+        else if (card == "purple")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Purple")
                 {
-                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Purple") // if the board index is equal to purple
-                {
-                            player.Position = i; // set the player's postion to the index of the board where purple is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-            else if (card == "orange")
+            }
+        }
+        else if (card == "orange")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Orange")
                 {
-                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Orange") // if the board index is equal to orange
-                {
-                            player.Position = i; // set the player's postion to the index of the board where orange is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-            else if (card == "green")
+            }
+        }
+        else if (card == "green")
+        {
+            for (int i = player.Position + 1; i < board.Length; i++)
+            {
+                if (board[i] == "Green")
                 {
-                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
-                {
-                        if (board[i] == "Green") // if the board index is equal to green
-                {
-                            player.Position = i; // set the player's postion to the index of the board where green is located on the board 
-                            break; // stops the looping to prevent constant looping
+                    player.Position = i;
+                    break;
                 }
-            }      
-                }      
+            }
+        }
+    }
+}  
+      
 
             // TODO: C# Intro 2 - Implement multi-way branch logic (if / else if / else)
             
