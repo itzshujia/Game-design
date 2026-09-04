@@ -243,7 +243,7 @@ namespace CandyLandConsole
 static void MovePlayer(Player player, string card)
 {
     // What if the card is a special character card
-    if (drawnCard == specialcharactercard)
+    if (card == "Plumpy" || card == "Mr. Mint" || card == "Jolly" || card == "Gramma Nut" || card == "Princess Lolly" || card == "Queen Frostine")
     {
         if (card == "Plumpy")
         {
@@ -271,7 +271,7 @@ static void MovePlayer(Player player, string card)
         }
     }
     // What if the card is a single color
-    else if (card == singleColor)
+    else if (card == "Red" || card == "Yellow" || card == "Blue" || card == "Purple" || card == "Orange" || card == "Green")
     {
         if (card == "Red")
         {
@@ -340,120 +340,102 @@ static void MovePlayer(Player player, string card)
             }
         }
     }
-    else if ( card == doubleColor )
+    else if (card == "Double Red" || card == "Double Yellow" || card == "Double Blue" || card == "Double Purple" || card == "Double Orange" || card == "Double Green")
     {
         if ( card == "Double Red")
           {
+            int redSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Red")
+                    {
+                        redSpacesFound++;
+                        if (redSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Red")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
                 if ( card == "Double Yellow")
           {
+            int yellowSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Yellow")
+                    {
+                        yellowSpacesFound++;
+                        if (yellowSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Yellow")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
                 if ( card == "Double Blue")
           {
+            int blueSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Blue")
+                    {
+                        blueSpacesFound++;
+                        if (blueSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Blue")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
                  if ( card == "Double Purple")
           {
+            int purpleSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Purple")
+                    {
+                        purpleSpacesFound++;
+                        if (purpleSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Purple")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
                 if ( card == "Double Orange")
           {
+            int orangeSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Orange")
+                    {
+                        orangeSpacesFound++;
+                        if (orangeSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Orange")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
                 if ( card == "Double Green")
           {
+            int greenSpacesFound = 0;
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Green")
+                    {
+                        greenSpacesFound++;
+                        if (greenSpacesFound == 2)
                         {
-                            for (int a = player.Postition + 1; a < board.Length; a++)
-                            {
-                                if (board[a] == "Green")
-                                {
-                                    player.Position = a; 
-                                    break;
-                                }
-                                player.Position = a; 
-                                break;
-                            }
+                            player.Position = i;
+                            break;
                         }
+                    }
                 }
           }
     }
@@ -518,7 +500,6 @@ static void MovePlayer(Player player, string card)
                     }
                 }
              }
-            
 
 
             // TODO: C# Intro 2
