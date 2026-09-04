@@ -462,10 +462,15 @@ static void MovePlayer(Player player, string card)
         Console.WriteLine("Invalid card drawn. No movement.");
     }
 
-    
+    if (player.Position > CastleIndex) // check if player position is greater than castle index
+    {
+        player.Position = CastleIndex; // set player position to castle index
+    }
 
-}  
-      
+    CheckForShortcuts(player); // check for shortcuts
+    CheckForLicorice(player); // check for licorice
+
+    
 
             // TODO: C# Intro 2 - Implement multi-way branch logic (if / else if / else)
             
