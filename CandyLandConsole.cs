@@ -249,7 +249,7 @@ static void MovePlayer(Player player, string card)
         {
             player.Position = PlumIndex; // Change player's position to Plum's index
         }       
-        else if (card == "Mr.Mint")
+        else if (card == "Mr. Mint")
         {
             player.Position = PeppermintStickIndex; // Change player's position to Mr. Mint's index
         }         
@@ -537,12 +537,12 @@ static void MovePlayer(Player player, string card)
         /// <summary>
         /// DAY 3: Verify if active player landed on or went past the final Castle space.
         /// </summary>
-        static bool IsGameOver(Player player)
+        static bool IsGameOver(Player player) 
         {
-            if (player.Position >= CastleIndexl)
+            if (player.Position >= CastleIndex)
             { 
+                Console.WriteLine($"{player.Name} has reached King Kandy's Castle!"); // log that the player has won
                 return true; // if player position is greater than or equal to castle index, return true
-                console.writeline($"{player.Name} has reached King Kandy's Castle!"); // log that the player has won
             }
             else 
             {
