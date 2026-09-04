@@ -498,27 +498,23 @@ static void MovePlayer(Player player, string card)
         {
             if (player.Position == GummyPassStartIndex) // If players postition is on start of gummy pass 
             {
-                for ( int i = player.Position + 1; i < Board.Length; i++  )
+                for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Yellow") // find the yellow on the board
                     {
-                        player.Position = i // change player's position to yellow
+                        player.Position = i; // change player's position to yellow
                         break; // stop the loop
                     }
                 }
             }
             if (player.Position == PeppermintPassStartIndex)
             {
-                for ( int i = player.Position + 1; i < Board.Length; i++ ) }
-            {
-                if (player.Position == PeppermintPassStartIndex) { // If the players position is on the start for peppermint pass
-            { 
-                for ( int i = player.Position + 1; i < Board.Length; i++ )
+                for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Yellow")
                     {
-                                player.Position = i // change player's position to yellow
-                                break; // stop the loop
+                        player.Position = i; // change player's position to yellow
+                        break; // stop the loop
                     }
                 }
              }
