@@ -527,18 +527,7 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void PrintBoardState(Player[] players)
         {
-            for (int index = 0; index < board.Length; index++)
-            {
-                Console.Write($"Space {index} [{board[index]}]");
 
-                foreach (Player player in players)
-                {
-                    if (player.Position == index)
-                    {
-                        Console.Write($" <{player.Name} is here>");
-                    }
-                }
-            }
         }
 
         /// <summary>
