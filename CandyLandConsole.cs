@@ -243,35 +243,59 @@ namespace CandyLandConsole
         static void MovePlayer(Player player, string card)
         {
             if (drawnCard == specialcharactercard)
-            {
-                 if (card == "Plumpy") 
+            
+                 if (card == "Plumpy")
                  {
-                    player.positiong = PlumIndex; // Change the player's postion in board to Plum's location on index
+                     player.positiong = PlumIndex; // Change the player's postion in board to Plum's location on index
                  }       
                  else if (card == "Mr.Mint")
                  {
-                    player.position = PeppermintStickIndex; // Change the player's postion in board to Mr. Mint's location on index
+                     player.position = PeppermintStickIndex; // Change the player's postion in board to Mr. Mint's location on index
                  }         
                  else if (card == "Jolly")
                  {
-                    player.position = GumdropIndex; // Change the player's postion in board to Jolly's location on index
+                     player.position = GumdropIndex; // Change the player's postion in board to Jolly's location on index
                  }         
                  else if (card == "Gramma Nut")
                  {
-                    player.position = PeanutBrittleIndex; // Change the player's postion in board to Gramma Nut's location on index
+                     player.position = PeanutBrittleIndex; // Change the player's postion in board to Gramma Nut's location on index
                  }         
                  else if (card == "Princess Lolly")
                  {
-                    player.position = LollipopIndex; // Change the player's postion in board to Princess Lolly's location on index
+                     player.position = LollipopIndex; // Change the player's postion in board to Princess Lolly's location on index
                  }         
                  else if (card == "Queen Frostine")
-                    {
-                        player.position = SnowflakeIndex; // Change the player's postion in board to Queen Frostine's location on index
-                    }
+                 {
+                     player.position = SnowflakeIndex; // Change the player's postion in board to Queen Frostine's location on index
+                 }
             else if (card == singlecolor) {
                 if (card == "red")
-                
-            }
+                {
+                    for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
+                {
+                        if (board[i] == "Red") // if the board index is equal to red
+                {
+                            player.Position = i; // set the player's postion to the index of the board where red is located on the board 
+                            break; // stops the looping to prevent constant looping
+                }
+                        else if (card == "yellow")
+                {
+                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
+                {
+                        if (board[i] == "Yellow") // if the board index is equal to yellow
+                {
+                            player.Position = i; // set the player's postion to the index of the board where yellow is located on the board 
+                            break; // stops the looping to prevent constant looping
+                }
+                if (card == "blue")
+                {
+                     for (int i = player.Position + 1; i < board.Length; i++) // loop through the entire board, each time adding 1 to postion
+                {
+                        if (board[i] == "Blue") // if the board index is equal to blue
+                {
+                            player.Position = i; // set the player's postion to the index of the board where blue is located on the board 
+                            break; // stops the looping to prevent constant looping
+                }
             // TODO: C# Intro 2 - Implement multi-way branch logic (if / else if / else)
             
             // Scenario A: Drawing a special character card
