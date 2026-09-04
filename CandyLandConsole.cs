@@ -527,10 +527,18 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void PrintBoardState(Player[] players)
         {
-            // TODO: C# Intro 4 (Nested loops or loop-array iteration)
-            // Iterate over the board array. Print spaces as ASCII/text.
-            // Indicate player positions (e.g., "Space 10 [Red] <PlayerName is here>").
-            // For brevity, you can show a mini-map or print a list of active positions.
+            for (int index = 0; index < board.Length; index++)
+            {
+                Console.Write($"Space {index} [{board[index]}]");
+
+                foreach (Player player in players)
+                {
+                    if (player.Position == index)
+                    {
+                        Console.Write($" <{player.Name} is here>");
+                    }
+                }
+            }
         }
 
         /// <summary>
