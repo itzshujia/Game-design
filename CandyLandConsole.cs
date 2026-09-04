@@ -513,6 +513,10 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void CheckForLicorice(Player player)
         {
+            if (player.Position == Licorice1Index || player.Position == Licorice2Index ) // if player lands on licorice
+            {
+                player.StuckTurns = 1; // set stuck turn to 1
+            }
             // TODO: C# Intro 2
             // If player lands by EXACT COUNT on a Licorice space index:
             // Set the player's StuckTurns field to 1.
