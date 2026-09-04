@@ -161,9 +161,9 @@ namespace CandyLandConsole
             board[PlumIndex] = "Plumpy"; // added plumpy to the board index - 9 space
             board[PeppermintStickIndex] = "Mr. Mint"; // added Mr. Mint to the board index - 17 space
             board[GumdropIndex] = "Jolly"; // added Jolly to the board index - 42 space
-            board[PeanutBrittleIndex] = "Gramma Nut"; // added Gramma Nut to the board index - 58 space
-            board[LollipopIndex] = "Princess Lolly"; // added Princess Lolly to the board index - 73 space
-            board[SnowflakeIndex] = "Queen Frostine"; // added Queen Frostine to the board index - 89 space
+            board[PeanutBrittleIndex] = "Gramma Nut"; // added Gramma Nut to the board index - 75 space
+            board[LollipopIndex] = "Princess Lolly"; // added Princess Lolly to the board index - 96 space
+            board[SnowflakeIndex] = "Queen Frostine"; // added Queen Frostine to the board index - 117 space
 
             // Save Indexes for Licorice spaces and shortcut spaces ( peperment and gummy pass - include start and end indexes)
             board[Licorice1Index] = "Licorice 1"; // added Licoric 1 to the board index - 34 space
@@ -344,13 +344,13 @@ static void MovePlayer(Player player, string card)
     {
         if ( card == "Double Red")
           {
-            int redSpacesFound = 0;
+            int redSpacesFound = 0; // counter for red spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Red")
                     {
-                        redSpacesFound++;
-                        if (redSpacesFound == 2)
+                        redSpacesFound++; // if board lands on red, +1 to counter
+                        if (redSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -360,13 +360,13 @@ static void MovePlayer(Player player, string card)
           }
                 if ( card == "Double Yellow")
           {
-            int yellowSpacesFound = 0;
+            int yellowSpacesFound = 0; // counter for yellow spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Yellow")
                     {
-                        yellowSpacesFound++;
-                        if (yellowSpacesFound == 2)
+                        yellowSpacesFound++; // if board lands on yellow, +1 to counter
+                        if (yellowSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -376,13 +376,13 @@ static void MovePlayer(Player player, string card)
           }
                 if ( card == "Double Blue")
           {
-            int blueSpacesFound = 0;
+            int blueSpacesFound = 0; // counter for blue spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Blue")
                     {
-                        blueSpacesFound++;
-                        if (blueSpacesFound == 2)
+                        blueSpacesFound++; // if board lands on blue, +1 to counter
+                        if (blueSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -392,13 +392,13 @@ static void MovePlayer(Player player, string card)
           }
                  if ( card == "Double Purple")
           {
-            int purpleSpacesFound = 0;
+            int purpleSpacesFound = 0; // counter for purple spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Purple")
                     {
-                        purpleSpacesFound++;
-                        if (purpleSpacesFound == 2)
+                        purpleSpacesFound++; // if board lands on purple, +1 to counter
+                        if (purpleSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -408,13 +408,13 @@ static void MovePlayer(Player player, string card)
           }
                 if ( card == "Double Orange")
           {
-            int orangeSpacesFound = 0;
+            int orangeSpacesFound = 0; // counter for orange spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
                     if (board[i] == "Orange")
                     {
-                        orangeSpacesFound++;
-                        if (orangeSpacesFound == 2)
+                        orangeSpacesFound++; // if board lands on orange, +1 to counter 
+                        if (orangeSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -424,13 +424,13 @@ static void MovePlayer(Player player, string card)
           }
                 if ( card == "Double Green")
           {
-            int greenSpacesFound = 0;
+            int greenSpacesFound = 0; // counter for green spaces found
             for (int i = player.Position + 1; i < board.Length; i++)
                 {
-                    if (board[i] == "Green")
+                    if (board[i] == "Green") 
                     {
-                        greenSpacesFound++;
-                        if (greenSpacesFound == 2)
+                        greenSpacesFound++; // if board lands on green, +1 to counter
+                        if (greenSpacesFound == 2) // if the counter for green spaces found is equal to 2, repeat if counter isnt 2
                         {
                             player.Position = i;
                             break;
@@ -441,7 +441,7 @@ static void MovePlayer(Player player, string card)
     }
     else 
     {
-        Console.WriteLine("Invalid card drawn. No movement.");
+        Console.WriteLine("Invalid card drawn. No movement."); // if drawn card doesn't match any of the cards, log invalid card drawn
     }
 
     if (player.Position > CastleIndex) // check if player position is greater than castle index
