@@ -535,8 +535,16 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static bool IsGameOver(Player player)
         {
+            if (player.Position >= CastleIndexl)
+            { 
+                return true; // if player position is greater than or equal to castle index, return true
+                console.writeline($"{player.Name} has reached King Kandy's Castle!"); // log that the player has won
+            }
+            else 
+            {
+                return false; // if player position is less than castle index, return false
+            }
             // TODO: Return true if the player's position index is >= King Kandy's Castle index.
-            return false;
         }
     }
 
