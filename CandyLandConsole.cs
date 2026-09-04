@@ -273,7 +273,7 @@ static void MovePlayer(Player player, string card)
     // What if the card is a single color
     else if (card == singleColor)
     {
-        if (card == "red")
+        if (card == "Red")
         {
             for (int i = player.Position + 1; i < board.Length; i++) // add 1 to player's postition in i
             {
@@ -284,7 +284,7 @@ static void MovePlayer(Player player, string card)
                 }
             }
         }
-        else if (card == "yellow")
+        else if (card == "Yellow")
         {
             for (int i = player.Position + 1; i < board.Length; i++) // add 1 to player's postition in i
             {
@@ -295,7 +295,7 @@ static void MovePlayer(Player player, string card)
                 }
             }
         }
-        else if (card == "blue")
+        else if (card == "Blue")
         {
             for (int i = player.Position + 1; i < board.Length; i++) // add 1 to player's postition in i
             {
@@ -306,7 +306,7 @@ static void MovePlayer(Player player, string card)
                 }
             }
         }
-        else if (card == "purple")
+        else if (card == "Purple")
         {
             for (int i = player.Position + 1; i < board.Length; i++) // add 1 to player's postition in i
             {
@@ -317,7 +317,7 @@ static void MovePlayer(Player player, string card)
                 }
             }
         }
-        else if (card == "orange")
+        else if (card == "Orange")
         {
             for (int i = player.Position + 1; i < board.Length; i++) // add 1 to player's postition in i
             {
@@ -328,7 +328,7 @@ static void MovePlayer(Player player, string card)
                 }
             }
         }
-        else if (card == "green")
+        else if (card == "Green")
         {
             for (int i = player.Position + 1; i < board.Length; i++)
             {
@@ -350,6 +350,106 @@ static void MovePlayer(Player player, string card)
                         {
                             for (int a = player.Postition + 1; a < board.Length; a++)
                             {
+                                if (board[a] == "Red")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
+                                player.Position = a; 
+                                break;
+                            }
+                        }
+                }
+          }
+                if ( card == "Double Yellow")
+          {
+            for (int i = player.Position + 1; i < board.Length; i++)
+                {
+                    if (board[i] == "Yellow")
+                        {
+                            for (int a = player.Postition + 1; a < board.Length; a++)
+                            {
+                                if (board[a] == "Yellow")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
+                                player.Position = a; 
+                                break;
+                            }
+                        }
+                }
+          }
+                if ( card == "Double Blue")
+          {
+            for (int i = player.Position + 1; i < board.Length; i++)
+                {
+                    if (board[i] == "Blue")
+                        {
+                            for (int a = player.Postition + 1; a < board.Length; a++)
+                            {
+                                if (board[a] == "Blue")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
+                                player.Position = a; 
+                                break;
+                            }
+                        }
+                }
+          }
+                 if ( card == "Double Purple")
+          {
+            for (int i = player.Position + 1; i < board.Length; i++)
+                {
+                    if (board[i] == "Purple")
+                        {
+                            for (int a = player.Postition + 1; a < board.Length; a++)
+                            {
+                                if (board[a] == "Purple")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
+                                player.Position = a; 
+                                break;
+                            }
+                        }
+                }
+          }
+                if ( card == "Double Orange")
+          {
+            for (int i = player.Position + 1; i < board.Length; i++)
+                {
+                    if (board[i] == "Orange")
+                        {
+                            for (int a = player.Postition + 1; a < board.Length; a++)
+                            {
+                                if (board[a] == "Orange")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
+                                player.Position = a; 
+                                break;
+                            }
+                        }
+                }
+          }
+                if ( card == "Double Green")
+          {
+            for (int i = player.Position + 1; i < board.Length; i++)
+                {
+                    if (board[i] == "Green")
+                        {
+                            for (int a = player.Postition + 1; a < board.Length; a++)
+                            {
+                                if (board[a] == "Green")
+                                {
+                                    player.Position = a; 
+                                    break;
+                                }
                                 player.Position = a; 
                                 break;
                             }
@@ -357,6 +457,12 @@ static void MovePlayer(Player player, string card)
                 }
           }
     }
+    else 
+    {
+        Console.WriteLine("Invalid card drawn. No movement.");
+    }
+
+    
 
 }  
       
