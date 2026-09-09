@@ -166,7 +166,7 @@ namespace CandyLandConsole
             board[SnowflakeIndex] = "Queen Frostine"; // added Queen Frostine to the board index - 117 space
 
             // Save Indexes for Licorice spaces and shortcut spaces ( peperment and gummy pass - include start and end indexes)
-            board[Licorice1Index] = "Licorice 1"; // added Licoric 1 to the board index - 34 space
+            board[Licorice1Index] = "Licorice 1"; // added Licoric 1 t o the board index - 34 space
             board[Licorice2Index] = "Licorice 2"; // added Licorice 2 to the board index - 82 space
             board[GummyPassStartIndex] = "Gummy Pass Start"; // added Gummy Pass ( start ) to the board index - 7 space
             board[GummyPassEndIndex] = "Gummy Pass End"; // added Gummy Pass ( end ) to the board index - 55 space
@@ -478,28 +478,27 @@ static void MovePlayer(Player player, string card)
         /// </summary>
         static void CheckForShortcuts(Player player)
         {
-            if (player.Position == GummyPassStartIndex) // If players postition is on start of gummy pass 
+            if (player.Position == GummyPassStartIndex) // if player lands on gummy pass start index
             {
-                for (int i = player.Position + 1; i < board.Length; i++)
-                {
-                    if (board[i] == "Yellow") // find the yellow on the board
-                    {
-                        player.Position = i; // change player's position to yellow
-                        break; // stop the loop
-                    }
-                }
+                player.Position = GummyPassEndIndex; // teleport player to gummy pass end index
             }
-            if (player.Position == PeppermintPassStartIndex)
+
+
+            if (player.Postion == GummyPassEndIndex) // if player lands on gummy pass end index
             {
-                for (int i = player.Position + 1; i < board.Length; i++)
-                {
-                    if (board[i] == "Yellow")
-                    {
-                        player.Position = i; // change player's position to yellow
-                        break; // stop the loop
-                    }
-                }
-             }
+                player.Position = GummyPassStartIndex; // teleport player to gummy pass start index
+            }
+
+
+            if (player.Position == PeppermintPassStartIndex) // if player lands on peppermint pass start index
+            {
+                player.Position = PeppermintPassEndIndex; // teleport player to peppermint pass end index
+            }
+
+            
+            if (player.Position == PeppermintPassEndIndex) // if player lands on peppermint pass end index
+            {
+                player.Position = PeppermintPassStartIndex; // teleport player to peppermint pass start index
 
 
             // TODO: C# Intro 2
